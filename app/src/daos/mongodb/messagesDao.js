@@ -17,14 +17,6 @@ export default class MessagesDaoDB{
             console.log(error)
         };
     };
-    async editMessage(msgId, obj) {
-        try {
-        const updMessage = await MessagesModel.updateOne({_id: msgId}, obj);
-        return updMessage;
-        } catch (error) {
-            console.log(error)
-        };
-    };
     async deleteMessage(msgId) {
         try {
             const delMessage = await MessagesModel.findByIdAndDelete(msgId)
