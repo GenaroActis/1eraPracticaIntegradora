@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-const connectionString = 'mongodb+srv://genaroActis:toxinfinito22@cluster0.6zafi08.mongodb.net/'
+const connectionString = 'mongodb+srv://genaroActis:toxinfinito22@cluster0.6zafi08.mongodb.net/test?retryWrites=true&w=majority'
 
 try {
     await mongoose.connect(connectionString);
