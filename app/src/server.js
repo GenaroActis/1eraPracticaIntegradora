@@ -52,25 +52,4 @@ socketServer.on('connection', async (socket)=>{
         const arrayMsgUpdatedDel = await msgDao.getAllMessages();
         socket.emit('arrayMsg', arrayMsgUpdatedDel);
     });
-    // let arrayProducts = await productsManager.getProducts()
-    // socket.emit('arrayProducts', arrayProducts); 
-    // socket.on('newProduct', async (obj) => {
-    //     try {
-    //         const prodValidado = productPropValidator(obj)
-    //         if(typeof prodValidado === "object"){
-    //             await productsManager.createProducts(obj) 
-    //             arrayProducts = await productsManager.getProducts()
-    //             socket.emit('arrayProducts', arrayProducts);
-    //         }else{
-    //             socket.emit('error', prodValidado);
-    //         }
-    //     } catch (error) {
-    //         socket.emit('error', error.message);
-    //     }
-    // })
-    // socket.on('deleteProduct', async (id) => {
-    //     await productsManager.deleteProduct(id)
-    //     arrayProducts = await productsManager.getProducts()
-    //     socket.emit('arrayProducts', arrayProducts);
-    // })
 });
